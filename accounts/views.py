@@ -67,7 +67,7 @@ class RegisterView(View):
                 },
             )
             to_email = form.cleaned_data.get('email')
-            send_mail(subject, message, 'punky19161916@gmail.com', [to_email])
+            send_mail(subject, message, 'Email@gmail.com', [to_email])
             activation_msg = "Open your email to activate account."
             return render(
                 request, "accounts/activate_email.html", {"activation_msg": activation_msg}
